@@ -1,0 +1,465 @@
+extends /pug/5_layouts/l-simple.pug
+
+include /pug/3_sections/s-footer.pug
+include /pug/3_sections/s-header-2.pug
+
+block styles
+    link(href=`${config.static_url}dist/css/4_pages/information/p-eecc.css` media="all" rel="stylesheet" type="text/css")
+
+block content
+    +row()
+        +col-full()
+            +s-header-2('RESUMEN ESTADO DE CUENTA')
+
+            table.e-table.p-eecc__container-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tbody
+                    tr
+                        td.p-eecc__greeting-container(align="center")
+                            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                tbody
+                                    tr
+                                        td.p-eecc__greeting(align="center")
+                                            p.p-eecc__greeting-name
+                                                | Hola Cynthia
+                                    tr
+                                        td.p-eecc__greeting(align="center")
+                                            p.p-eecc__greeting-text
+                                                | Tu fondo de jubilación al cierre de junio 2019 es
+                                    tr
+                                        td.p-eecc__greeting(align="center")
+                                            h2.p-eecc__greeting-amount
+                                                sup.p-eecc__greeting-text-sup S/
+                                                | 90,000
+                                    tr
+                                        td.p-eecc__greeting(align="center")
+                                            p.p-eecc__greeting-subtext
+                                                |  Conformado por:
+                    tr
+                        td.p-eecc__balance-table-container(align="center")
+                            table.e-table.p-eecc__balance-table(cellpadding='0', cellspacing='0', width='80%')
+                                tbody
+                                    tr
+                                        td.p-eecc__balance(align="center")
+                                            +col-container()
+                                                +col-three(155)
+                                                    table.p-eecc__contents
+                                                        tbody
+                                                            tr
+                                                                td
+                                                                    p.p-eecc__balance-sign
+                                                                td.p-eecc__balance-item-container(align="center")
+                                                                    img.p-eecc__balance-img(src!=`${config.assets_url}/eecc/aporte.png`)
+                                                                    p.p-eecc__balance-name
+                                                                        | Aportes
+                                                                    h5.p-eecc__balance-amount
+                                                                        sup.p-eecc__greeting-text-sup S/
+                                                                        | 90,000
+                                                +col-three(155)
+                                                    table.p-eecc__contents
+                                                        tbody
+                                                            tr
+                                                                td
+                                                                    p.p-eecc__balance-sign
+                                                                        | +
+                                                                td.p-eecc__balance-item-container(align="center")
+                                                                    img.p-eecc__balance-img(src!=`${config.assets_url}/eecc/rentabilidad.png`)
+                                                                    p.p-eecc__balance-name
+                                                                        | Rentabilidad
+                                                                    h2.p-eecc__balance-amount
+                                                                        sup.p-eecc__greeting-text-sup S/
+                                                                        | 90,000
+                                                +col-three(155)
+                                                    table.p-eecc__contents
+                                                        tbody
+                                                            tr
+                                                                td
+                                                                    p.p-eecc__balance-sign
+                                                                        | -
+                                                                td.p-eecc__balance-item-container(align="center")
+                                                                    img.p-eecc__balance-img(src!=`${config.assets_url}/eecc/retiros.png`)
+                                                                    p.p-eecc__balance-name
+                                                                        | Retiros
+                                                                    h5.p-eecc__balance-amount
+                                                                        sup.p-eecc__greeting-text-sup S/
+                                                                        | 90,000
+                                            //- table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                            //-     tbody
+                                            //-         tr
+                                            //-             td.p-eecc__three-column
+                                            //-                 <!--[if (gte mso 9)|(IE)]>
+                                            //-                 <table width="100%">
+                                            //-                 <tr>
+                                            //-                 <td width="180" valign="top">
+                                            //-                 <![endif]-->
+                                            //-                 table.p-eecc__column.p-eecc__balance-column
+                                            //-                     tr
+                                            //-                         td.p-eecc__inner
+                                            //-                             table.p-eecc__contents
+                                            //-                                 tbody
+                                            //-                                     tr
+                                            //-                                         td
+                                            //-                                             p.p-eecc__balance-sign
+                                            //-                                         td.p-eecc__balance-item-container(align="center")
+                                            //-                                             img.p-eecc__balance-img(src!=`${config.assets_url}/eecc/aporte.png`)
+                                            //-                                             p.p-eecc__balance-name
+                                            //-                                                 | Aportes
+                                            //-                                             h5.p-eecc__balance-amount
+                                            //-                                                 sup.p-eecc__greeting-text-sup S/
+                                            //-                                                 | 90,000
+                                                           
+                                            //-                 <!--[if (gte mso 9)|(IE)]>
+                                            //-                 </td><td width="180" valign="top">
+                                            //-                 <![endif]-->
+                                            //-                 table.p-eecc__column.p-eecc__balance-column
+                                            //-                     tr
+                                            //-                         td.p-eecc__inner
+                                            //-                             table.p-eecc__contents
+                                            //-                                 tbody
+                                            //-                                     tr
+                                            //-                                         td
+                                            //-                                             p.p-eecc__balance-sign
+                                            //-                                                 | +
+                                            //-                                         td.p-eecc__balance-item-container(align="center")
+                                            //-                                             img.p-eecc__balance-img(src!=`${config.assets_url}/eecc/rentabilidad.png`)
+                                            //-                                             p.p-eecc__balance-name
+                                            //-                                                 | Rentabilidad
+                                            //-                                             h2.p-eecc__balance-amount
+                                            //-                                                 sup.p-eecc__greeting-text-sup S/
+                                            //-                                                 | 90,000
+                                                            
+                                            //-                 <!--[if (gte mso 9)|(IE)]>
+                                            //-                 </td><td width="180" valign="top">
+                                            //-                 <![endif]-->
+                                            //-                 table.p-eecc__column.p-eecc__balance-column
+                                            //-                     tr
+                                            //-                         td.p-eecc__inner
+                                            //-                             table.p-eecc__contents
+                                            //-                                 tbody
+                                            //-                                     tr
+                                            //-                                         td
+                                            //-                                             p.p-eecc__balance-sign
+                                            //-                                                 | -
+                                            //-                                         td.p-eecc__balance-item-container(align="center")
+                                            //-                                             img.p-eecc__balance-img(src!=`${config.assets_url}/eecc/retiros.png`)
+                                            //-                                             p.p-eecc__balance-name
+                                            //-                                                 | Retiros
+                                            //-                                             h5.p-eecc__balance-amount
+                                            //-                                                 sup.p-eecc__greeting-text-sup S/
+                                            //-                                                 | 90,000
+                                                            
+                                            //-                 <!--[if (gte mso 9)|(IE)]>
+                                            //-                 </td>
+                                            //-                 </tr>
+                                            //-                 </table>
+                                            //-                 <![endif]-->
+                                            //- table.e-table(cellpadding='0', cellspacing='0', width='100%')
+                                            //-     tbody
+                                            //-         tr
+                                            //-             td(align="center")
+                                            //-                 +col-custom-width(140)
+                                            //-                     table.e-table(cellpadding='0', cellspacing='0', width='140')
+                                            //-                         tbody
+                                            //-                             tr
+                                            //-                                 td.p-eecc__balance-item-container(align="center")
+                                            //-                                     img.p-eecc__balance-img(src!=`${config.assets_url}/pig.png`)
+                                            //-                                     p.p-eecc__balance-name
+                                            //-                                         | Aportes
+                                            //-                                     h5.p-eecc__balance-amount
+                                            //-                                         sup.p-eecc__greeting-text-sup S/
+                                            //-                                             | 90,000
+                                            //-                 +col-custom-width(140)
+                                            //-                     table.e-table(cellpadding='0', cellspacing='0', width='140')
+                                            //-                         tbody
+                                            //-                             tr
+                                            //-                                 td
+                                            //-                                     span.p-eecc__balance-sign
+                                            //-                                         | +
+                                            //-                                 td.p-eecc__balance-item-container(align="center")
+                                            //-                                     img.p-eecc__balance-img(src!=`${config.assets_url}/pig.png`)
+                                            //-                                     p.p-eecc__balance-name
+                                            //-                                         | Rentabilidad
+                                            //-                                     h5.p-eecc__balance-amount
+                                            //-                                         sup.p-eecc__greeting-text-sup S/
+                                            //-                                             | 90,000 
+
+                                            //-                 +col-custom-width(140)
+                                            //-                     table.e-table(cellpadding='0', cellspacing='0', width='140')
+                                            //-                         tbody
+                                            //-                             tr
+                                            //-                                 td
+                                            //-                                     span.p-eecc__balance-sign
+                                            //-                                         | -
+                                            //-                                 td.p-eecc__balance-item-container(align="center")
+                                            //-                                     img.p-eecc__balance-img(src!=`${config.assets_url}/pig.png`)
+                                            //-                                     p.p-eecc__balance-name
+                                            //-                                         | Retiros
+                                            //-                                     h5.p-eecc__balance-amount
+                                            //-                                         sup.p-eecc__greeting-text-sup S/
+                                            //-                                             | 90,000     
+                                    tr
+                                        td.p-eecc__balance-detail(align="center")
+                                            table.e-table(cellpadding='0', cellspacing='0', width='100%')
+                                                tbody
+                                                    tr
+                                                        td(align="center")
+                                                            p.p-eecc__balance-detail-text
+                                                                | Tus aportes han sido invertidos en el Fondo 2, de ahí su rentabilidad.
+                                                            p.p-eecc__balance-detail-text
+                                                                strong ¿Sabes si es el Fondo correcto para ti?
+                    tr
+                        td.p-eecc__balance-tip
+                            p
+                                | Acumulado desde tu afiliación a las AFP (10/09/1990)
+
+            table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tbody
+                    tr
+                        td(align="center")
+                            table.e-table(cellpadding='0', cellspacing='0', width='90%', border='0')
+                                tbody
+                                    tr
+                                        td.p-ecc_tracking-title(align="center")
+                                            p
+                                                strong Hazle seguimiento 
+                                                br 
+                                                | a tus aportes
+                                    tr
+                                        td(align="center")
+                                            +col-container()
+                                                +col-two(267)
+                                                    table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                                        tr
+                                                            td.p-ecc_tracking-table-detail-title(width='25%')
+                                                                strong Ene 
+                                                                | 18
+                                                            td.p-ecc_tracking-table-detail-title(width='25%')
+                                                                strong Ene 
+                                                                | 18
+                                                            td.p-ecc_tracking-table-detail-title(width='25%')
+                                                                strong Ene 
+                                                                | 18
+                                                            td.p-ecc_tracking-table-detail-title(width='25%')
+                                                                strong Ene 
+                                                                | 18
+                                                        
+                                                        tr
+                                                            td.p-ecc_tracking-table-detail-text(width='25%')
+                                                                | No
+                                                                br
+                                                                | Afiliado
+                                                            td.p-ecc_tracking-table-detail-text(width='25%')
+                                                                | No
+                                                                br
+                                                                | Afiliado
+                                                            td.p-ecc_tracking-table-detail-text(width='25%')
+                                                                p 
+                                                                    img.p-ecc_tracking-table-detail-icontext(src!=`${config.assets_url}/eecc/check.png`)
+                                                            td.p-ecc_tracking-table-detail-text(width='25%')
+                                                                p 
+                                                                    img.p-ecc_tracking-table-detail-icontext(src!=`${config.assets_url}/eecc/equis.png`)
+                                                +col-two(267)
+                                                    div(style="float:right; padding-right:10px;width: 100%")
+                                                        table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                                            tr
+                                                                td.p-ecc_tracking-table-detail-title(width='25%')
+                                                                    strong Ene 
+                                                                    | 18
+                                                                td.p-ecc_tracking-table-detail-title(width='25%')
+                                                                    strong Ene 
+                                                                    | 18
+                                                                td.p-ecc_tracking-table-detail-title(width='25%')
+                                                                    strong Ene 
+                                                                    | 18
+                                                                td.p-ecc_tracking-table-detail-title(width='25%')
+                                                                    strong Ene 
+                                                                    | 18
+                                                            tr
+                                                                td.p-ecc_tracking-table-detail-text
+                                                                    p 
+                                                                        img.p-ecc_tracking-table-detail-icontext(src!=`${config.assets_url}/eecc/check.png`)
+                                                                td.p-ecc_tracking-table-detail-text
+                                                                    p 
+                                                                        img.p-ecc_tracking-table-detail-icontext(src!=`${config.assets_url}/eecc/check.png`)
+                                                                td.p-ecc_tracking-table-detail-text.p-ecc_tracking-table-detail-text-prev
+                                                                    p 
+                                                                        img.p-ecc_tracking-table-detail-icontext(src!=`${config.assets_url}/eecc/check.png`)
+                                                                td.p-ecc_tracking-table-detail-text.p-ecc_tracking-table-detail-text-actual
+                                                                    p 
+                                                                        img.p-ecc_tracking-table-detail-icontext(src!=`${config.assets_url}/eecc/check.png`)
+                                                            tr
+                                                                td
+                                                                td
+                                                                td
+                                                                td.p-ecc_tracking-table-detail-text-actual-detail(align="center")
+                                                                    p.p-ecc_tracking-table-detail-text-actual-detail-text
+                                                                        | Tu aporte
+                                                                        br
+                                                                        strong.p-ecc_tracking-table-detail-text-actual-detail-text S/
+                                                                            | 200
+
+                                    tr
+                                        td.p-ecc_tracking-table-detail-container(align="center")
+                                            table.e-table.p-ecc_tracking-table-detail(cellpadding='0', cellspacing='0', width='90%', border='0')
+                                                tbody
+                                                    tr  
+                                                        td.p-ecc_tracking-table-detail-content(align="center")
+                                                            p.p-ecc_tracking-table-detail-tip-text
+                                                                | Teniendo, al menos, 4 aportes&nbsp;&nbsp;
+                                                                img.p-ecc_tracking-table-detail-icontext(src!=`${config.assets_url}/eecc/check.png`) 
+                                                                | &nbsp;&nbsp;en los últimos 8 meses tu seguro se mantendrá activo
+                                                            p.p-ecc_tracking-table-detail-tip-text
+                                                                | Una &nbsp;&nbsp;
+                                                                img.p-ecc_tracking-table-detail-icontext(src!=`${config.assets_url}/eecc/equis.png`)
+                                                                | &nbsp;&nbsp;significa que no recibimos el aporte de dicho mes. 
+
+            table.p-eecc__more-detail-container(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tbody
+                    tr
+                        td(align="center")
+                            table.e-table(cellpadding='0', cellspacing='0', width='90%', border='0')
+                                tbody
+                                    tr
+                                        td.p-eecc__more-detail-icon(align="center")
+                                            img.p-eecc__more-detail-img(src!=`${config.assets_url}/eecc/eecc.png`)
+                                    tr
+                                        td(align="center")
+                                            p
+                                                strong Para mayor detalle 
+                                            p
+                                                | de tus aportes, ingresa a:
+                                    tr
+                                        td.p-eecc__more-detail-button(align="center")
+                                            img.p-re-register__link-btn(src!=`${config.assets_url}/information/btn-enter-here.png`)
+                                    tr
+                                        td.p-eecc__more-detail-slogan(align="center")
+                                            p(style="font-style:oblique")
+                                                | Estamos para servirte.
+                                    tr
+                                        td.p-eecc__more-detail-cards-title(align="center")
+                                            p
+                                                | Conoce lo que 
+                                                strong tenemos para ti
+                                    tr
+                                        td.p-eecc__more-detail-cards-container(align="center")
+                                            +col-container()
+                                                +col-three(175)
+                                                    table.p-eecc__more-detail-card.p-eecc__contents
+                                                        tbody
+                                                            tr
+                                                                td(align="center")
+                                                                    img.p-eecc__more-detail-card-img(src!=`${config.assets_url}/eecc/AHORA.png`)
+                                                                td.p-eecc__more-detail-card-text
+                                                                    p.p-eecc__more-detail-card-text
+                                                                        | Gana descuentos con el 
+                                                                        strong App AHORA
+                                                +col-three(175)
+                                                    table.p-eecc__more-detail-card.p-eecc__contents
+                                                        tbody
+                                                            tr
+                                                                td(align="center")
+                                                                    img.p-eecc__more-detail-card-img(src!=`${config.assets_url}/eecc/25-porciento.png`)
+                                                                td.p-eecc__more-detail-card-text
+                                                                    p.p-eecc__more-detail-card-text
+                                                                        | Retira el 25% 
+                                                                        strong para tu primera casa
+                                                +col-three(175)
+                                                    table.p-eecc__more-detail-card.p-eecc__contents
+                                                        tbody
+                                                            tr
+                                                                td(align="center")
+                                                                    img.p-eecc__more-detail-card-img(src!=`${config.assets_url}/eecc/seguro.png`)
+                                                                td.p-eecc__more-detail-card-text
+                                                                    p.p-eecc__more-detail-card-text
+                                                                        strong Un seguro 
+                                                                        | para ti y tu familia
+                                            //- table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                            //-     tbody
+                                            //-         tr
+                                            //-             td.p-eecc__three-column
+                                            //-                 <!--[if (gte mso 9)|(IE)]>
+                                            //-                 <table width="100%">
+                                            //-                 <tr>
+                                            //-                 <td width="180" valign="top">
+                                            //-                 <![endif]-->
+                                            //-                 table.p-eecc__column
+                                            //-                     tr
+                                            //-                         td.p-eecc__inner
+                                            //-                             table.p-eecc__more-detail-card.p-eecc__contents
+                                            //-                                 tbody
+                                            //-                                     tr
+                                            //-                                         td.p-eecc__more-detail-card-img(align="center")
+                                            //-                                             img.p-eecc__balance-img(src!=`${config.assets_url}/pig.png`)
+                                            //-                                         td.p-eecc__more-detail-card-text
+                                            //-                                             p.p-eecc__more-detail-card-text
+                                            //-                                                 | Gana descuentos con el 
+                                            //-                                                 strong App AHORA
+                                            //-                 <!--[if (gte mso 9)|(IE)]>
+                                            //-                 </td><td width="180" valign="top">
+                                            //-                 <![endif]-->
+                                            //-                 table.p-eecc__column
+                                            //-                     tr
+                                            //-                         td.p-eecc__inner
+                                            //-                             table.p-eecc__more-detail-card.p-eecc__contents
+                                            //-                                 tbody
+                                            //-                                     tr
+                                            //-                                         td.p-eecc__more-detail-card-img(align="center")
+                                            //-                                             img.p-eecc__balance-img(src!=`${config.assets_url}/pig.png`)
+                                            //-                                         td.p-eecc__more-detail-card-text
+                                            //-                                             p.p-eecc__more-detail-card-text
+                                            //-                                                 | Retira el 25% 
+                                            //-                                                 strong para tu primera casa
+                                            //-                 <!--[if (gte mso 9)|(IE)]>
+                                            //-                 </td><td width="180" valign="top">
+                                            //-                 <![endif]-->
+                                            //-                 table.p-eecc__column
+                                            //-                     tr
+                                            //-                         td.p-eecc__inner
+                                            //-                             table.p-eecc__more-detail-card.p-eecc__contents
+                                            //-                                 tbody
+                                            //-                                     tr
+                                            //-                                         td.p-eecc__more-detail-card-img(align="center")
+                                            //-                                             img.p-eecc__balance-img(src!=`${config.assets_url}/pig.png`)
+                                            //-                                         td.p-eecc__more-detail-card-text
+                                            //-                                             p.p-eecc__more-detail-card-text
+                                            //-                                                 strong Un seguro 
+                                            //-                                                 | para ti y tu familia
+                                            //-                 <!--[if (gte mso 9)|(IE)]>
+                                            //-                 </td>
+                                            //-                 </tr>
+                                            //-                 </table>
+                                            //-                 <![endif]-->
+                                            //- table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                            //-     tbody
+                                            //-         tr
+                                            //-             td.p-eecc__more-detail-card-container(align="center")
+                                            //-                 table.e-table.p-eecc__more-detail-card(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                            //-                     tbody
+                                            //-                         tr
+                                            //-                             td.p-eecc__more-detail-card-img(align="center")
+                                            //-                                 img.p-eecc__balance-img(src!=`${config.assets_url}/pig.png`)
+                                            //-                             td.p-eecc__more-detail-card-text
+                                            //-                                 p.p-eecc__more-detail-card-text
+                                            //-                                     | Gana descuentos con el 
+                                            //-                                     strong App AHORA
+                                            //-             td.p-eecc__more-detail-card-container(align="center")
+                                            //-                 table.e-table.p-eecc__more-detail-card(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                            //-                     tbody
+                                            //-                         tr
+                                            //-                             td.p-eecc__more-detail-card-img(align="center")
+                                            //-                                 img.p-eecc__balance-img(src!=`${config.assets_url}/pig.png`)
+                                            //-                             td.p-eecc__more-detail-card-text
+                                            //-                                 p.p-eecc__more-detail-card-text
+                                            //-                                     | Retira el 25% 
+                                            //-                                     strong para tu primera casa
+                                            //-             td.p-eecc__more-detail-card-container(align="center")
+                                            //-                 table.e-table.p-eecc__more-detail-card(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                            //-                     tbody
+                                            //-                         tr
+                                            //-                             td.p-eecc__more-detail-card-img(align="center")
+                                            //-                                 img.p-eecc__balance-img(src!=`${config.assets_url}/pig.png`)
+                                            //-                             td.p-eecc__more-detail-card-text
+                                            //-                                 p.p-eecc__more-detail-card-text
+                                            //-                                     strong Un seguro 
+                                            //-                                     | para ti y tu familia
+            
+            +s-footer()

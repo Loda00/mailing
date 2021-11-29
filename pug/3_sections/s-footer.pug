@@ -1,0 +1,117 @@
+mixin s-footer()
+    center.s-footer
+        table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+            tbody
+                tr
+                    td.s-footer__td
+                        table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                            tbody                        
+                                //- tr
+                                    td.e-table__td.s-footer__title(align="center")
+                                        strong ¿Dudas?&nbsp;
+                                        | No te preocupes, contáctanos por cualquiera de estos medios: 
+                                
+                                tr
+                                    td(align="center")
+                                            +col-container()
+                                                +col-custom(128)
+                                                    table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                                        tbody
+                                                            tr
+                                                                td.e-table__td.s-footer__info(align="center")
+                                                                    a(href="https://www.integra.com.pe?action=chatea")
+                                                                        img.s-footer__info-img(src!=`${config.assets_url}/chat.png`, width='35')
+                                                                        p.s-footer__info-subtitle Chatea
+                                                                        p.s-footer__info-text Disponible
+                                                                        p.s-footer__info-text siempre
+                                                                    //- a.s-footer__info-link(href="https://www.integra.com.pe/wps/portal/integra/")
+                                                                        | Clic aquí&nbsp;&nbsp;
+                                                                        img.s-footer__info-link-icon(src!=`${config.assets_url}/arrow-right.png`)
+                                                +col-custom(128)
+                                                    table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                                        tbody
+                                                            tr
+                                                                td.e-table__td.s-footer__info(align="center")
+                                                                    a(href="http://www.integra.com.pe/wps/portal/integra/contacto#correoelectronico")
+                                                                        img.s-footer__info-img(src!=`${config.assets_url}/mail.png`, width='35')
+                                                                        p.s-footer__info-subtitle Escríbenos
+                                                                        p.s-footer__info-text Respondemos
+                                                                        p.s-footer__info-text en 24 hrs.
+                                                                    //- a.s-footer__info-link(href="http://www.integra.com.pe/wps/portal/integra/contacto#correoelectronico")
+                                                                        | Escríbenos&nbsp;&nbsp;
+                                                                        img.s-footer__info-link-icon(src!=`${config.assets_url}/arrow-right.png`)
+                                                +col-custom(128)
+                                                    table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                                        tbody
+                                                            tr
+                                                                td.e-table__td.s-footer__info(align="center")
+                                                                    img.s-footer__info-img(src!=`${config.assets_url}/phone.png`, width='35')
+                                                                    p.s-footer__info-subtitle Llámanos
+                                                                    p.s-footer__info-text 
+                                                                        | Lima:&nbsp;
+                                                                        a.s-footer__text-number 513-5050
+                                                                    p.s-footer__info-text
+                                                                        | Provincias:&nbsp;
+                                                                        a.s-footer__text-number 0800-40110
+                                                +col-custom(128)
+                                                    table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                                        tbody
+                                                            tr
+                                                                td.e-table__td.s-footer__info(align="center")
+                                                                    a(href="https://www.integra.com.pe/wps/portal/integra/contacto/listadoagencias")
+                                                                        img.s-footer__info-img(src!=`${config.assets_url}/ubication.png`, width='35')
+                                                                        p.s-footer__info-subtitle Visítanos
+                                                                        p.s-footer__info-text Lunes a Viernes
+                                                                        p.s-footer__info-text de 9 am a 6pm
+                                                                    //- a.s-footer__info-link(href="https://www.integra.com.pe/wps/portal/integra/contacto/listadoagencias")
+                                                                        | Conócelas&nbsp;&nbsp;
+                                                                        img.s-footer__info-link-icon(src!=`${config.assets_url}/arrow-right.png`)
+                                //- tr
+                                //-     td.e-table__td.s-footer__info(align="center")
+                                //-         img.s-footer__info-img(src!=`${config.assets_url}/phone.png`)
+                                //-         p.s-footer__info-subtitle Contact Center
+                                //-         p.s-footer__info-text 
+                                //-             | Lima:&nbsp;
+                                //-             a.s-footer__text-number 513-5050
+                                //-         p.s-footer__info-text
+                                //-             | Provincias:&nbsp;
+                                //-             a.s-footer__text-number 0800-40110
+
+                                //- tr
+                                //-     td.e-table__td.s-footer__info(align="center")
+                                //-         img.s-footer__info-img(src!=`${config.assets_url}/chat.png`)
+                                //-         p.s-footer__info-subtitle Chat en línea
+                                //-         p.s-footer__info-text Conversa con Irene,
+                                //-         p.s-footer__info-text nuestra asistente virtual
+                                //-         a.s-footer__info-link(href="https://www.integra.com.pe/wps/portal/integra/")
+                                //-             | Clic aquí&nbsp;&nbsp;
+                                //-             img.s-footer__info-link-icon(src!=`${config.assets_url}/arrow-right.png`)
+
+                                //- tr
+                                //-     td.e-table__td.s-footer__info(align="center")
+                                //-         img.s-footer__info-img(src!=`${config.assets_url}/ubication.png`)
+                                //-         p.s-footer__info-subtitle Conoce nuestras<br>agencias
+                                //-         a.s-footer__info-link(href="https://www.integra.com.pe/wps/portal/integra/contacto/listadoagencias")
+                                //-             | Conócelas&nbsp;&nbsp;
+                                //-             img.s-footer__info-link-icon(src!=`${config.assets_url}/arrow-right.png`)
+
+                                //- tr
+                                //-     td.e-table__td.s-footer__info(align="center")
+                                //-         img.s-footer__info-img(src!=`${config.assets_url}/mail.png`)
+                                //-         p.s-footer__info-subtitle Escríbenos por<br>correo electrónico
+                                //-         a.s-footer__info-link(href="http://www.integra.com.pe/wps/portal/integra/contacto#correoelectronico")
+                                //-             | Escríbenos&nbsp;&nbsp;
+                                //-             img.s-footer__info-link-icon(src!=`${config.assets_url}/arrow-right.png`)
+
+                                //- tr
+                                //-     td.e-table__td(align="center")
+                                //-         hr.s-footer__line
+                        //- center
+                        //-     table.e-table.s-footer__down-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                        //-         tbody                        
+                        //-             tr
+                        //-                 td.e-table__td(align="center")
+                        //-                     p.s-footer__text
+                        //-                         | Para asegurar la entrega de nuestros e-mail en su correo, por favor agregue&nbsp;
+                        //-                         a.s-footer__text-mail afpenlinea@integra.com.pe
+                        //-                         | &nbsp;a su libreta de direcciones de correo

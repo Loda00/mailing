@@ -1,0 +1,82 @@
+extends /pug/5_layouts/l-simple.pug
+
+include /pug/3_sections/s-footer-2.pug
+include /pug/3_sections/s-header-2.pug
+
+block styles
+    link(href=`${config.static_url}dist/css/4_pages/unete/p-transfer-out.css` media="all" rel="stylesheet" type="text/css")
+    link(href=`${config.static_url}dist/css/4_pages/information/p-age-legal.css` media="all" rel="stylesheet" type="text/css")
+
+block content
+    +row()
+        +col-full()
+            +s-header-2('CONSTANCIA DE ESTIMACIÓN')
+
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td.s-greeting__container(align="center")
+                        table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                            tr
+                                td.s-greeting__icon(align="right", width="10%")
+
+                                td(align="left", width="60%")
+                                    p.s-greeting__title
+                                        | Hola,&nbsp;
+                                        strong Cynthia
+                                    p.s-greeting__text
+                                        | Adjuntamos la&nbsp;
+                                        strong Constancia de 
+                                        br
+                                        strong Estimación&nbsp;
+                                        | que solicistaste al realizar el
+                                        br
+                                        | Paso 1 de tu proceso de Pensión y/o Pensión.
+
+                                td.s-greeting__icon(align="right", width="20%")
+                                    img.s-greeting__img(src!=`${config.assets_url}/annoying-face.png`)
+                                
+                                td.s-greeting__icon-greeting(align="right", width="10%")
+            
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td.p-transfer-out__message
+                        center
+                            table.e-table(cellpadding='0', cellspacing='0', width='80%', border='0')
+                                tr
+                                    td.p-age-legal__text-1(align="center")
+                                        p
+                                            | Ahora, 
+                                            strong agenda una cita en nuestras
+                                            br
+                                            strong agencias&nbsp;
+                                            | para continuar el Paso 2,
+                                            br
+                                            | donde nos comunicarás tu decisión
+                                        br
+                                tr
+                                    td(align="center")      
+                                        p.p-age-legal__text-phones
+                                            | Comunícate con nosotros llamando al (01) 391-3656, 
+                                            br
+                                            | de lunes a viernes de 8:00 am a 8:00 pm y sábados 
+                                            br
+                                            | de 8:00 am a 1:00 pm. Nuestros asesores te guiarán 
+                                            br
+                                            | con los siguientes pasos.
+                                        br
+                                        p.p-transfer-out__line
+                                        br
+                tr
+                    td.p-transfer-out__disclaimer.p-age-legal__disclaimer
+                        center
+                            table.e-table(cellpadding='0', cellspacing='0', width='90%', border='0')
+                                tr
+                                    td(align="center")
+                                        p Esta cita se programará a partir
+                                            strong del séptimo día hábil de realizado el Paso 1.
+                                tr
+                                    td.p-transfer-out__disclaimer-td(align="center")
+                                        p
+                                            | ¡Que tengas un buen día!
+            
+            +s-footer-2()

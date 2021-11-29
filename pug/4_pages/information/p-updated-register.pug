@@ -1,0 +1,39 @@
+extends /pug/5_layouts/l-simple.pug
+
+include /pug/3_sections/s-footer.pug
+include /pug/3_sections/s-header.pug
+
+block styles
+    link(href=`${config.static_url}dist/css/4_pages/information/p-updated-register.css` media="all" rel="stylesheet" type="text/css")
+
+block content
+    +row()
+        +col-full()
+            
+            +s-header('Cynthia')
+                table.e-table.p-updated-register__salute-description(cellpadding='0', cellspacing='0', width='100%', border='0')
+                    tbody
+                        tr
+                            td.p-updated-register__salute-description-td(align="center")
+                                p.p-updated-register__salute-description-text
+                                    | Hemos actualizado&nbsp;
+                                    strong nuestros sistemas de registro&nbsp;
+                                    | y desde ahora, cada vez que quieras ingresar a tu cuenta personal en nuestra nueva web,&nbsp;
+                                    strong podrás hacerlo a través de la opción DNI
+
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tbody
+                    tr
+                        td.p-updated-register__img-desk-td(align="center")
+                            img.p-updated-register__img-desk(src!=`${config.assets_url}/information/monitor.png`)
+                    tr
+                        td.e-table__td(align="center")
+                            p.p-updated-register__text-to-link 
+                                strong Ingresa hoy y descubre <br> 
+                                | todo sobre tus aportes
+                    tr
+                        td.p-updated-register__link-td(align="center")
+                            a.p-updated-register__link(href="https://www.afpintegra.pe/iniciar-sesion")
+                                img.p-updated-register__link-btn(src!=`${config.assets_url}/information/btn-enter-here.png`)
+
+            +s-footer()

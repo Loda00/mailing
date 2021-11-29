@@ -1,0 +1,20 @@
+include /pug/0_toolbox/variables.pug
+include /pug/0_toolbox/mixins.pug
+include /pug/0_toolbox/control-structure.pug
+include /pug/0_toolbox/functions.pug
+
+doctype html
+
+html(lang="es" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#")
+    head
+        meta(name="format-detection" content="telephone=no")
+        link(href=`${config.static_url}css/modules/all/all.css` media="all" rel="stylesheet" type="text/css")
+
+        block styles
+
+        style.
+            mediaQueries
+
+    body
+        +body()
+            block content

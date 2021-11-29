@@ -1,0 +1,272 @@
+extends /pug/5_layouts/l-simple.pug
+
+include /pug/3_sections/s-footer-2.pug
+include /pug/3_sections/s-header-2.pug
+
+block styles
+  link(href=`${config.static_url}dist/css/4_pages/edad-legal/p-edad-legal.css` media="all" rel="stylesheet" type="text/css")
+
+block content
+  +row()
+    +col-full()
+      +s-header-2('FORMULARIO DE CONTACTO', '')
+
+      table.e-table(cellpadding='0' cellspacing='0' width='100%' border='0')
+        tr
+          td.s-greeting__container.hasCurve(width="100%" align="center" valign="top")
+            table.s-greeting__table-head.e-table(cellpadding='0' cellspacing='0' width='70%' border='0' align="left")
+              tr
+                td.s-greeting__table-head-text.s-p-edad-legal-banner(align="right" width="100%")
+                  div.s-greeting__title
+                    | Hola&nbsp;
+                    strong Juan
+                  br
+                  p.s-greeting__text
+                    | Gracias por comunicarte con nosotros,
+                    br
+                    | a continuación te contamos como 
+                    strong iniciar tu trámite de Retiro de 95.5%
+
+            table.e-table(cellpadding='0' cellspacing='0' width='25%' border='0' align="left")
+              tr
+                td.s-greeting__icon(align="center" width="60%")
+                  img(src!=`${config.assets_url}/icon-mail.png`)
+        tr
+          td.s-footer-2__curve-td
+            table.e-table(cellpadding='0' cellspacing='0' width='100%' border='0')
+              tbody
+                tr
+                  td.s-greeting__curve(align="left")
+                    img.s-footer-2__curve(src!=`${config.assets_url}/curve2.png`)
+
+        tr
+          td.s-footer-2__curve-td
+            center
+              table.e-table(cellpadding='0' cellspacing='0' width='90%' border='0')
+                tbody
+                  tr
+                    td
+                      br
+                      div.s-greeting__text
+                        p.p-edad-legal__text_size Podrás iniciar el trámite de retiro de hasta el 95.5% de tu fondo de pensión, si calificas a algún tipo de jubilación. A continuación, te contamos cuales son los principales tipos de jubilación y sus requisitos
+
+        tr
+          td.s-footer-2__curve-td
+            center
+              table.e-table(cellpadding='0' cellspacing='0' width='90%' border='0')
+                tbody
+                  tr
+                    td
+                      br
+                      br
+                      strong Jubilación Edad Legal
+                  tr
+                    td
+                      ul.p-edad-legal__text_size
+                        li Tener 65 años de edad.
+                  tr
+                    td
+                      p.p-edad-legal__text_size Si cumples con este requisito, puedes iniciar el Paso 1 de tu trámite en nuestra web, ingresando aquí:
+                      br
+                      br
+                  tr
+                    td(align="center")
+                      a(href="https://www.afpintegra.pe/iniciar-sesion?pagina=dashboard/jubilacion-retiro" target="_blank")
+                        img.p-async-affiliation-btn.p-edad-legal__btn(src!=`${config.assets_url}/information/btn-step-one.png`)
+                  tr
+                    td.s-footer-2__curve-td
+                      center
+                        table.e-table(cellpadding='0' cellspacing='0' width='85%' border='0')
+                          tr
+                            td
+                              br
+                              hr
+
+        tr
+          td.s-footer-2__curve-td
+            center
+              table.e-table(cellpadding='0' cellspacing='0' width='90%' border='0')
+                tbody
+                  tr
+                    td
+                      br
+                      br
+                      strong Régimen de Jubilación Anticipada por Desempleo - REJA:
+                  tr
+                    td
+                      ul.p-edad-legal__text_size
+                        li Tener 50 años de edad en caso de mujeres y 55 años de edad en caso 	de hombres.
+                        li Tener 12 meses consecutivos de desempleo.
+                        li No contar con ingresos por cuarta categoría que superen las 7 UIT 	dentro de los últimos doce meses.
+            
+        tr
+          td.s-footer-2__curve-td
+            center
+              table.e-table(cellpadding='0' cellspacing='0' width='90%' border='0')
+                tbody
+                  tr
+                    td
+                      p.p-edad-legal__text_size Si cumples con estos requisitos y deseas iniciar el Paso 1 de tu trámite, sigue estos pasos:
+                      br
+                  tr
+                    td
+                      ol.p-edad-legal__text_size
+                        li Ingresa a la opción "Mi Cuenta" de nuestra web con el número de 	documento de identidad y contraseña.
+                        li Haz clic en "Mas opciones".
+                        li Ingresa a la opción "Disponibilidad del 95.5%.
+                        li Sigue las indicaciones que te mostrará la web para iniciar tu paso 1 del 	trámite y obtener la "Constancia de Estimación de Retiro y/o Pensión".
+                  tr
+                    td(align="center")
+                      br
+                      a(href="https://www.afpintegra.pe/iniciar-sesion" target="_blank")
+                        img.p-async-affiliation-btn.p-edad-legal__btn(src!=`${config.assets_url}/information/btn-my-account.png`)
+                  tr
+                    td.s-footer-2__curve-td
+                      center
+                        table.e-table(cellpadding='0' cellspacing='0' width='85%' border='0')
+                          tr
+                            td
+                              br
+                              hr
+
+        tr
+          td.s-footer-2__curve-td
+            center
+              table.e-table(cellpadding='0' cellspacing='0' width='90%' border='0')
+                tbody
+                  tr
+                    td
+                      br
+                      strong Jubilación Anticipada Ordinaria:
+                  tr
+                    td
+                      ul.p-edad-legal__text_size
+                        li Tener 50 años de edad en caso de mujeres y 55 años de edad en caso de hombres.
+                        li Si el cálculo de su pensión resulta mayor o igual al 40% del promedio 	de tus últimas 120 últimas remuneraciones.
+                        li Contar como mínimo con 72 aportes acreditados en tu fondo.
+                  tr
+                    td
+                      br
+                      p.p-edad-legal__text_size Si cumples con estos requisitos y deseas iniciar el Paso 1, solicita una cita telefónica llamando al 
+                        strong.p-edad-legal__contact_link (01) 391-3656
+                        | , de lunes a viernes de 8:00 am a 8:00 pm y sábados de 8:00 am a 1:00 pm.
+                  tr
+                    td.s-footer-2__curve-td
+                      center
+                        table.e-table(cellpadding='0' cellspacing='0' width='85%' border='0')
+                          tr
+                            td
+                              br
+                              hr
+
+        tr
+          td.s-footer-2__curve-td
+            center
+              table.e-table(cellpadding='0' cellspacing='0' width='90%' border='0')
+                tbody
+                  tr
+                    td
+                      br
+                      strong.p-edad-legal__text_size Otros tipos de jubilación:
+                  tr
+                    td
+                      br
+                      p.p-edad-legal__text_size Es importante mencionar que existen otros tipos de jubilación que tienen requisitos especiales, los cuales son:
+                  tr
+                    td
+                      ul.p-edad-legal__text_size
+                        li Jubilación Anticipada de Riesgo
+                        li Jubilación Adelantada 19990
+                  tr
+                    td
+                      p.p-edad-legal__text_size Si deseas información sobre estos tipos de jubilación y sus requisitos para iniciar el trámite de retiro de hasta el 95.5% de tu fondo, haz clic 
+                        a.p-edad-legal__contact_link(href="https://www.integra.com.pe/wps/portal/integra/personas/tramites-del-afiliado/devolucion-de-aportes/disponibilidad-del-fondo/disponibilidad95.5.html" target="_blank") aquí.
+                  tr
+                    td
+                      br
+                      p.p-edad-legal__text_size Para dar inicio a tu trámite bajo estas opciones de jubilación, solicita una cita telefónica llamando al 
+                        strong.p-edad-legal__contact_link (01) 391-3656
+                        |, de lunes a viernes de 8:00 am a 8:00 pm y sábados de 8:00 am a 1:00 pm.
+                  tr
+                    td.s-footer-2__curve-td
+                      center
+                        table.e-table(cellpadding='0' cellspacing='0' width='85%' border='0')
+                          tr
+                            td
+                              br
+                              hr
+
+        tr
+          td.s-footer-2__curve-td
+            center
+              table.e-table(cellpadding='0' cellspacing='0' width='90%' border='0')
+                tbody
+                  tr
+                    td
+                      br
+                      p.p-edad-legal__text_size Agradecemos no responder a este correo, ya que se trata de una respuesta automática.
+                  tr
+                    td
+                      br
+                      p.p-edad-legal__text_size Para cualquier duda o consulta adicional, ponemos a tu disposición nuestros canales de atención remotos:
+
+
+        tr
+          td.s-footer-2__curve-td
+            center
+              table.e-table(cellpadding='0' cellspacing='0' width='71%' border='0')
+                tbody
+                  tr
+                    td
+                      br
+                      br
+                      img.p-edad-legal__contact_icon(src!=`${config.assets_url}/globe.png`)
+                    td.p-edad-legal__text_size
+                      br
+                      br
+                      strong Página web:
+                      br
+                      a.p-edad-legal__contact_link(href="https://www.afpintegra.pe" target="_blank") www.afpintegra.pe
+                  tr
+                    td
+                      br
+                      br
+                      img.p-edad-legal__contact_icon(src!=`${config.assets_url}/phone2.png`)
+                    td.p-edad-legal__text_size
+                      br
+                      br
+                      strong Contact Center:
+                      br
+                      p.p-edad-legal__contact_link Lima: 513-5050 o Provincias: 0800-40110
+                  tr
+                    td
+                      br
+                      br
+                      img(src!=`${config.assets_url}/irene.png`)
+                    td.p-edad-legal__text_size
+                      br
+                      br
+                      strong Asistente Virtual Irene:
+                      br
+                      a.p-edad-legal__contact_link(href="https://www.afpintegra.pe/?action=chatea" target="_blank") Chatea con Irene haciendo clic aquí
+
+      center
+        table.e-table(cellpadding='0' cellspacing='0' width='85%' border='0')
+          tr
+            td(colspan="2")
+              br
+              br
+              br
+              center
+                table.e-table(cellpadding='0' cellspacing='0' width='90%' border='0')
+                  tr
+                    td(align="center")
+                      hr
+                      br
+                      br
+                      p.p-data-update-customer-suport__slogan
+                        strong A tu lado todo el camino
+                      br
+
+
+      +s-footer-2()

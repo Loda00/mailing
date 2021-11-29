@@ -1,0 +1,101 @@
+extends /pug/5_layouts/l-simple.pug
+
+include /pug/3_sections/s-footer.pug
+include /pug/3_sections/s-header-2.pug
+
+block styles
+    link(href=`${config.static_url}dist/css/4_pages/information/p-transfer.css` media="all" rel="stylesheet" type="text/css")
+
+block content
+    +row()
+        +col-full()
+            +s-header-2('SOLICITUD DE TRASPASO')
+
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td.s-greeting__container(align="center")
+                        table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                            tr
+                                td.s-greeting__icon(align="right", width="10%")
+                                
+                                td.s-greeting__icon(align="right", width="20%")
+                                    img.s-greeting__img(src!=`${config.assets_url}/transfer/caritafeliz.png`, width='100', height='100')
+
+                                td(align="left", width="60%")
+                                    p.s-greeting__title
+                                        | Hola,&nbsp;
+                                        strong Cynthia
+                                    p.s-greeting__text
+                                        | Aquí te adjuntamos la Solicitud de Traspaso que 
+                                        | completaste. La ficha solo necesita tu firma, no 
+                                        | llenes ningún otro campo. 
+                                
+                                td.s-greeting__icon-greeting(align="right", width="10%")
+            
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td.p-transfer__container-body(align="center")
+                        +col-container()
+                            +col-two(290)
+                                table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                    tr
+                                        td.p-transfer__container-body-img(align="right")
+                                            img.p-transfer__container-body-image(src!=`${config.assets_url}/transfer/foto.jpg`)
+                            +col-two(290)
+                                table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                    tr
+                                        td.p-transfer__container-body-content(align="right")
+                                            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                                tr
+                                                    td.p-transfer__container-body-content-title(align="left")
+                                                        strong Para continuar, 
+                                                        | debes
+                                            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                                tr
+                                                    td(align="left")  
+                                                        img.p-transfer__container-body-content-img.p-transfer__container-body-content-img2(src!=`${config.assets_url}/transfer/firma.png`)
+                                                    td.p-transfer__container-body-content-item(align="left")  
+                                                        | Imprimirla y firmarla
+                                                tr
+                                                    td(align="left")  
+                                                        img.p-transfer__container-body-content-img.p-transfer__container-body-content-img3(src!=`${config.assets_url}/transfer/camera.png`)
+                                                    td.p-transfer__container-body-content-item(align="left")  
+                                                        | Escanearla o
+                                                        br
+                                                        | tomarle una foto
+                                                tr
+                                                    td(align="left")  
+                                                        img.p-transfer__container-body-content-img.p-transfer__container-body-content-img4(src!=`${config.assets_url}/transfer/mail.png`)
+                                                    td.p-transfer__container-body-content-item(align="left")  
+                                                        | Enviarla a 
+                                                        br
+                                                        strong unete@integra.com.pe
+                                                        br
+                                                        | junto con la copia de tu DNI
+                                                tr
+                                                    td(align="left")  
+                                                        img.p-transfer__container-body-content-img.p-transfer__container-body-content-img1(src!=`${config.assets_url}/transfer/phone.png`)
+                                                    td.p-transfer__container-body-content-item(align="left")  
+                                                        | Esperar nuestra llamada
+                                                        br
+                                                        | para confirmar datos
+            
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td(align="center")
+                        table.e-table(cellpadding='0', cellspacing='0', width='90%', border='0')
+                            tr
+                                td(align="center", width="10%")
+                                td.p-transfer__disclaimer-container(align="center", width="80%")
+                                    p.p-transfer__disclaimer-container-text
+                                        | Al enviar tu Solicitud firmada del 
+                                        strong 1 al 23 del mes
+                                        | , en 1 mes más 
+                                        | ya podrías ser parte de AFP Integra; y en 2 meses, el traslado 
+                                        | de tu fondo se haría efectivo. Por otro lado, si la envías del 
+                                        strong 24 al 31 del mes,&nbsp;
+                                        | el proceso se extenderá un mes más.
+                                td(align="center", width="10%")
+
+            
+            +s-footer()

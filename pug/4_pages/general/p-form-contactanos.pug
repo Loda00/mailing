@@ -1,0 +1,50 @@
+extends /pug/5_layouts/l-simple.pug
+
+include /pug/3_sections/s-footer-2.pug
+include /pug/3_sections/s-header-2.pug
+
+block styles
+    link(href=`${config.static_url}dist/css/4_pages/general/p-form-contactanos.css` media="all" rel="stylesheet" type="text/css")
+
+block content
+    +row()
+        +col-full()
+            +s-header-2('FORMULARIO DE', 'REDES SOCIALES')
+
+            center
+                table.e-table(cellpadding='0', cellspacing='0', width='80%', border='0')
+                    tr
+                        td.p-form-contactanos__body-text(align="left")
+                            p
+                                strong Documento: 
+                                | DNI 49040878
+                            br
+                            p
+                                strong Nombres: 
+                                | Victor Morales
+                            br
+                            p
+                                strong Apellido Paterno: 
+                                | Morales
+                            br
+                            p
+                                strong Apellido Materno: 
+                                | Flores
+                            br
+                            p
+                                strong Celular: 
+                                | 999 999 999
+                            br
+                            p
+                                strong Correo: 
+                                | de@de.com
+                            br
+                            p
+                                strong Medio por el que se comunicó con AFP Integra: 
+                                | Twitter
+                            br
+                            p
+                                strong Detalle de la consulta: 
+                                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eum, eligendi, dicta explicabo consectetur dolorum ullam laudantium vero est illo deserunt quisquam vitae minus officia debitis? Error consequuntur nam laudantium?
+            
+            +s-footer-2()

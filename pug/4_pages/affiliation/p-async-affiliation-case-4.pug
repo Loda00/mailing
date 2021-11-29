@@ -1,0 +1,63 @@
+extends /pug/5_layouts/l-simple.pug
+
+include /pug/3_sections/s-footer-2.pug
+include /pug/3_sections/s-header-2.pug
+
+block styles
+    link(href=`${config.static_url}dist/css/4_pages/unete/p-transfer-out.css` media="all" rel="stylesheet" type="text/css")
+    link(href=`${config.static_url}dist/css/4_pages/information/p-async-affiliation.css` media="all" rel="stylesheet" type="text/css")
+
+block content
+    +row()
+        +col-full()
+            +s-header-2('RESPUESTA DE SOLICITUD', 'DE AFILIACIÒN')
+
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td.s-greeting__container.s-greeting__container-async(align="center")
+                        table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                            tr
+                                td.s-greeting__icon(align="right", width="10%")
+                                
+                                td.s-greeting__icon(align="right", width="20%")
+                                    img.s-greeting__img(src!=`${config.assets_url}/transfer/caritafeliz.png`)
+
+                                td(align="left", width="60%")
+                                    p.s-greeting__title
+                                        | Hola,&nbsp;
+                                        strong Cynthia
+                                    p.s-greeting__text
+                                        | ¡Ya eres parte de AFP Integra!
+
+                                
+                                td.s-greeting__icon-greeting(align="right", width="10%")
+
+                    tr
+                        td.s-footer-2__curve-td
+                            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                                tbody
+                                    tr
+                                        td.p-update-contact-data__curve(align="left")
+                                            img.s-footer-2__curve(src!=`${config.assets_url}/curve2.png`)
+            
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td.p-transfer-out__message.p-async-affiliation__message
+                        center
+                            table.e-table(cellpadding='0', cellspacing='0', width='80%', border='0')
+                                tr
+                                    td(align="center")
+                                        p
+                                            strong Te invitamos a ingresar a tu cuenta para que le hagas seguimiento a tu fondo. 
+                                        br
+                                tr
+                                    td(align="center")
+                                        a(href="https://www.afpintegra.pe/iniciar-sesion")
+                                            img.p-async-affiliation-btn(src!=`${config.assets_url}/information/button-iramicuenta.png`)
+                                tr
+                                    td.p-async-affiliation__tip(align="center")
+                                        p
+                                            | ¡Que tengas un buen día!
+
+            
+            +s-footer-2()

@@ -1,0 +1,68 @@
+@require $pathBase + '/stylus/0_toolbox/variables.styl'
+
+// Client-specific Styles & Reset
+#outlook a
+    padding 0
+
+// .ExternalClass applies to Outlook.com (the artist formerly known as Hotmail)
+.ExternalClass
+    width 100%
+
+#backgroundTable
+    margin 0
+    padding 0
+    width 100% !important
+    line-height 100% !important
+
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div
+    line-height 100%
+
+.button a
+    display inline-block
+    text-decoration none
+    -webkit-text-size-adjust none
+    text-align center
+
+.button a div
+    text-align center !important
+
+/* Outlook First */
+body.outlook p
+    display inline !important
+
+.container
+    max-width $emailWidth
+    background-color $tableBgColor
+
+.block-grid
+    border-spacing 0
+    border-collapse collapse
+    vertical-align top
+    width 100%
+    max-width $emailWidth
+    color $textColor
+    background-color $tableBgColor
+
+.col
+    display inline-block
+    vertical-align top
+
+.num6
+    width ( ( $emailWidth - ( $paddingRow * 2 ) ) / 2 )
+
+.num4
+    width ( ( $emailWidth - ( $paddingRow * 3 ) ) / 3 )
+
+.num8
+    width ( ( ( $emailWidth - ( $paddingRow * 3 ) ) / 3 ) * 2 )
+
+.paddingRow
+    padding 0 $paddingRow
+
+.body-bg-color
+    background-color $bgColor

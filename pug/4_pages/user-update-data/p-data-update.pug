@@ -1,0 +1,73 @@
+extends /pug/5_layouts/l-simple.pug
+
+include /pug/3_sections/s-footer-2.pug
+include /pug/3_sections/s-header-2.pug
+
+block styles
+    link(href=`${config.static_url}dist/css/4_pages/user-update-data/p-data-update.css` media="all" rel="stylesheet" type="text/css")
+
+block content
+    +row()
+        +col-full()
+            +s-header-2('ACTUALIZACIÓN DE DATOS', '')
+
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td.s-greeting__container.hasCurve(width="100%", align="center", valign="top")
+                        table.s-greeting__table-head.e-table(cellpadding='0', cellspacing='0', width='60%', border='0', align="left")
+                            tr
+                                td.s-greeting__table-head-text(align="right", width="60%")
+                                    p.s-greeting__title
+                                        | Hola,&nbsp;
+                                        strong Victor
+                                    p.s-greeting__text
+                                        | Has ingresado tu solicitud 
+                                        br
+                                        | de 
+                                        strong actualización de datos 
+                                            br
+                                            | con éxito.
+
+                                
+                        table.e-table(cellpadding='0', cellspacing='0', width='40%', border='0', align="right")
+                            tr
+                                td.s-greeting__icon(align="center", width="60%")
+                                    img.s-greeting__img(src!=`${config.assets_url}/email-greeting.png`, width="80", height="103")
+                tr
+                    td.s-footer-2__curve-td
+                        table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                            tbody
+                                tr
+                                    td.s-greeting__curve(align="left")
+                                        img.s-footer-2__curve(src!=`${config.assets_url}/curve2.png`)
+
+            center
+                table.e-table(cellpadding='0', cellspacing='0', width='85%', border='0')
+                    tr
+                        td(align="left", colspan="2")
+                            p
+                                br
+                                br
+                                | Evaluaremos tu documentación y te comunicaremos el resultado por correo electrónico. Si todo es conforme, podrás visualizar tus datos actualizados en la web en un plazo de 
+                                strong 5 días útiles. 
+                                br
+                                br
+                                | Caso contrario te solicitaremos enviar mayor evidencia para la evaluación.
+                    tr
+                        td(colspan="2")
+                            br
+                            br
+                            br
+                            center
+                                table.e-table(cellpadding='0', cellspacing='0', width='90%', border='0')
+                                    tr
+                                        td(align="center")
+                                            hr
+                                            br
+                                            br
+                                            p.p-data-update-customer-suport__slogan
+                                                strong A tu lado todo el camino
+                                            br
+
+            
+            +s-footer-2()

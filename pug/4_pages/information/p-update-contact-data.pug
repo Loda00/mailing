@@ -1,0 +1,94 @@
+extends /pug/5_layouts/l-simple.pug
+
+include /pug/3_sections/s-footer-2.pug
+include /pug/3_sections/s-header-2.pug
+
+block styles
+    link(href=`${config.static_url}dist/css/4_pages/information/p-update-contact-data.css` media="all" rel="stylesheet" type="text/css")
+
+block content
+    +row()
+        +col-full()
+            +s-header-2('AVISO DE CREACIÓN', 'DE NUEVA CONTRASEÑA')
+
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td.p-update-contact-data__greeting(align="center")
+                        table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                            tr
+                                td.s-greeting__icon(align="right", width="10%")
+                                
+                                td.s-greeting__icon(align="right", width="20%")
+                                    img.p-update-contact-data__greeting-icon(src!=`${config.assets_url}/icon-lock.png`, width="100")
+
+                                td(align="left", width="60%")
+                                    p.s-greeting__title
+                                        | Hola,&nbsp;
+                                        strong Cynthia
+                                    p.s-greeting__text
+                                        | Se ha iniciado un proceso de actualización 
+                                        | de datos de contacto y creación de nueva
+                                        | contraseña de tu cuenta en AFP Integra. 
+                                
+                                td.s-greeting__icon-greeting(align="right", width="10%")
+                tr
+                    td.s-footer-2__curve-td
+                        table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                            tbody
+                                tr
+                                    td.p-update-contact-data__curve(align="left")
+                                        img.s-footer-2__curve(src!=`${config.assets_url}/curve2.png`)
+            
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td.p-update-contact-data__body-text(align="center")
+                        p
+                            strong Si no reconoces este acceso, 
+                            | por favor, ponte
+                            br
+                            | en contacto con nosotros a la brevedad 
+                tr
+                    td(align="center")
+                        table.e-table(cellpadding='0', cellspacing='0', width='230px', border='0')
+                            tr  
+                                td(align="left")
+                                    img.p-update-contact-data__icon.p-update-contact-data__icon-1(src!=`${config.assets_url}/phone-2.png`, width="35")
+                                td.p-update-contact-data__icon-text.p-update-contact-data__icon-separator(align="center")
+                                    p
+                                        strong Llámanos
+                                    p
+                                        | Lima: (01) 513 5050
+                                    p
+                                        | Provincia: 0800 40 110  
+                            tr
+                                td(align="left")
+                                    img.p-update-contact-data__icon.p-update-contact-data__icon-2(src!=`${config.assets_url}/email-2.png`, width="35")
+                                td.p-update-contact-data__icon-text(align="center")
+                                    p
+                                        strong Escríbenos
+                                    p
+                                        | afpenlinea@integra.com.pe
+            
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td.p-update-contact-data__message
+                        center
+                            table.e-table(cellpadding='0', cellspacing='0', width='80%', border='0')
+                                tr
+                                    td(align="center")
+                                        br
+                                        br
+                                        p.p-transfer-out__line
+                                        br
+                tr
+                    td.p-transfer-out__disclaimer
+                        center
+                            table.e-table(cellpadding='0', cellspacing='0', width='90%', border='0')
+                                tr
+                                    td.p-transfer-out__disclaimer-td(align="center")
+                                        p
+                                            | En AFP Integra nos preocupamos por darte siempre una  experiencia más segura.
+                                        p
+                                            | ¡Que tengas un buen día!
+            
+            +s-footer-2()

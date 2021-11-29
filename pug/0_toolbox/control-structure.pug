@@ -1,0 +1,24 @@
+mixin if(statement)
+    | {{ if(!{statement}) { }}
+    block
+    | {{ } }}
+
+mixin else()
+    | {{ else{ }}
+    block
+    | {{ } }}
+
+mixin js()
+    | {{
+    block
+    | }}
+
+mixin for(statement)
+    | {{ for(!{statement}) { }}
+    block
+    | {{ } }}
+
+mixin foreach(statement)
+    | {{ foreach(!{statement}) { }}
+    block
+    | {{ } }}

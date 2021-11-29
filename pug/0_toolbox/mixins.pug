@@ -1,0 +1,216 @@
+include ./variables.pug
+
+mixin ie(condition, content)
+    | <!--[!{condition}]>
+    block
+    | <![endif]-->
+
+mixin body()
+    // BODY START
+    table.body(style='border-spacing: 0;border-collapse: collapse;vertical-align: top;height: 100%;width: 100%;table-layout: fixed', cellpadding='0', cellspacing='0', width='100%', border='0')&attributes(attributes)
+        tbody
+            tr(style='vertical-align: top')
+                td(style='word-break: break-word;border-collapse: collapse !important;vertical-align: top;background-color: #FFFFFF', valign='top')
+                    block
+    // BODY END
+
+mixin row()
+    // ROW START
+    table.body-bg-color(style='border-spacing: 0;border-collapse: collapse;vertical-align: top;', cellpadding='0', cellspacing='0', width='100%', border='0')&attributes(attributes)
+        tbody
+            tr(style='vertical-align: top')
+                td(style='word-break: break-word;border-collapse: collapse !important;vertical-align: top', width='100%', align="center")
+                    +ie('if gte mso 9')
+                        | <table id="outlookholder" border="0" cellspacing="0" cellpadding="0"><tr><td>
+                    +ie('if (IE)')
+                        | <table width="!{config.width}" cellpadding="0" cellspacing="0" border="0"><tr><td>
+
+                    table.container(style='border-spacing: 0;border-collapse: collapse;vertical-align: top;margin: 0 auto;text-align: inherit', cellpadding='0', cellspacing='0', align='center', width='100%', border='0')
+                        tbody
+                            tr(style='vertical-align: top')
+                                td(style='word-break: break-word;border-collapse: collapse !important;vertical-align: top', width='100%')
+                                    table.block-grid(cellpadding='0', cellspacing='0', width='100%')
+                                        tbody
+                                            // FILA
+                                            tr(style='vertical-align: top')
+                                                td.paddingRow(style='word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 0')
+                                                    block
+
+                                            // END FILA
+                    +ie('if mso ')
+                        | </td></tr></table>
+                    +ie('if (IE)')
+                        | </td></tr></table>
+    // ROW END
+
+mixin col-full()
+    // FULL START
+    +ie('if (gte mso 9)|(IE)')
+        | <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr>
+    +ie('if (gte mso 9)|(IE)')
+        | <td valign="top" width="!{config.width}">
+
+    .col.num12(style='display: inline-block;vertical-align: top;width: 100%')
+        table(style='border-spacing: 0;border-collapse: collapse;vertical-align: top', cellpadding='0', cellspacing='0', width='100%', border='0')&attributes(attributes)
+            tbody
+                tr(style='vertical-align: top')
+                    td(style='word-break: break-word;border-collapse: collapse !important;vertical-align: top;background-color: transparent;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;border-top: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-left: 0px solid transparent; font-size: 16px;')
+                        table(style='border-spacing: 0;border-collapse: collapse;vertical-align: top', cellpadding='0', cellspacing='0', width='100%', border='0')
+                            tbody
+                                tr(style='vertical-align: top')
+                                    td(style='word-break: break-word;border-collapse: collapse !important;vertical-align: top;width: 100%;')
+                                        block
+
+
+    +ie('if (gte mso 9)|(IE)')
+        | </td>
+    +ie('if (gte mso 9)|(IE)')
+        | </td></tr></table>
+    // FULL END
+
+mixin col-one-half()
+    // HALF START
+    +ie('if (gte mso 9)|(IE)')
+        | <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr>
+    +ie('if (gte mso 9)|(IE)')
+        | <td class="num6" valign="top">
+
+    .col.num6
+        table(style='border-spacing: 0;border-collapse: collapse;vertical-align: top', cellpadding='0', cellspacing='0', align='center', width='100%', border='0')&attributes(attributes)
+            tbody
+                tr(style='vertical-align: top')
+                    td(style='word-break: break-word;border-collapse: collapse !important;vertical-align: top;background-color: transparent;border-top: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-left: 0px solid transparent; font-size: 16px;')
+
+                        block
+
+    +ie('if (gte mso 9)|(IE)')
+        | </td>
+    +ie('if (gte mso 9)|(IE)')
+        | </td></tr></table>
+    // HALF END
+
+mixin col-custom-width(customWidth)
+    // HALF START
+    +ie('if (gte mso 9)|(IE)')
+        | <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr>
+    +ie('if (gte mso 9)|(IE)')
+        | <td width="!{customWidth}px" align="top">
+
+    .col(style!=`width: ${customWidth}px`)
+        table(style='border-spacing: 0;border-collapse: collapse;vertical-align: top', cellpadding='0', cellspacing='0', align='center', width='100%', border='0')&attributes(attributes)
+            tbody
+                tr(style='vertical-align: top')
+                    td(style='word-break: break-word;border-collapse: collapse !important;vertical-align: top;background-color: transparent;border-top: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-left: 0px solid transparent; font-size: 16px;')
+
+                        block
+
+    +ie('if (gte mso 9)|(IE)')
+        | </td>
+    +ie('if (gte mso 9)|(IE)')
+        | </td></tr></table>
+    // HALF END
+
+mixin col-one-third()
+    // ONE THIRD START
+    +ie('if (gte mso 9)|(IE)')
+        | <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr>
+    +ie('if (gte mso 9)|(IE)')
+        | <td valign="top" width="!{config.width / 3}">
+
+    .col.num4
+        table(style='border-spacing: 0;border-collapse: collapse;vertical-align: top', cellpadding='0', cellspacing='0', align='center', width='100%', border='0')&attributes(attributes)
+            tbody
+                tr(style='vertical-align: top')
+                    td(style='word-break: break-word;border-collapse: collapse !important;vertical-align: top;background-color: transparent;padding-top: 2px;padding-right: 0px;padding-bottom: 2px;padding-left: 0px;border-top: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-left: 0px solid transparent; font-size: 16px;')
+
+                        block
+
+    +ie('if (gte mso 9)|(IE)')
+        | </td>
+    +ie('if (gte mso 9)|(IE)')
+        | </td></tr></table>
+    // ONE THIRD END
+
+mixin col-two-thirds()
+    // TWO THIRDS START
+
+    +ie('if (gte mso 9)|(IE)')
+        | <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr>
+    +ie('if (gte mso 9)|(IE)')
+        | <td valign="top" width="!{(config.width / 3) * 2}">
+
+    .col.num8
+        table(style='border-spacing: 0;border-collapse: collapse;vertical-align: top', cellpadding='0', cellspacing='0', align='center', width='100%', border='0')&attributes(attributes)
+            tbody
+                tr(style='vertical-align: top')
+                    td(style='word-break: break-word;border-collapse: collapse !important;vertical-align: top;background-color: transparent;padding-top: 2px;padding-right: 0px;padding-bottom: 2px;padding-left: 0px;border-top: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-left: 0px solid transparent; font-size: 16px;')
+
+                        block
+
+    +ie('if (gte mso 9)|(IE)')
+        | </td>
+    +ie('if (gte mso 9)|(IE)')
+        | </td></tr></table>
+    // TWO THIRDS END
+
+mixin btn(value)
+    table(border='0', cellspacing='0', align="center", cellpadding='0').button
+        tbody
+            tr
+                td(align='center')
+                    a(target="_blank")&attributes(attributes) &nbsp;&nbsp;&nbsp;&nbsp; !{value} &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+mixin col-container()
+    table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+        tbody
+            tr
+                td(style="text-align: center")
+                    <!--[if (gte mso 9)|(IE)]>
+                    <table width="100%">
+                    <tr>
+                    <![endif]-->
+                    block
+                    <!--[if (gte mso 9)|(IE)]>
+                    </tr>
+                    </table>
+                    <![endif]-->
+
+mixin col-two(width)
+    <!--[if (gte mso 9)|(IE)]>
+    <td width="50%" valign="top">
+    <![endif]-->
+    table(style!=`width: 100%; max-width: ${width}px; display: inline-block; vertical-align: top;`)
+        tbody
+            tr
+                td(style!=`width: ${width}px`)
+                    block
+    <!--[if (gte mso 9)|(IE)]>
+    </td>
+    <![endif]-->
+
+mixin col-three(width)
+    <!--[if (gte mso 9)|(IE)]>
+    <td width="!{width}" valign="top">
+    <![endif]-->
+    table(style!=`width: 100%; max-width: ${width}px; display: inline-block; vertical-align: top;`)
+        tbody
+            tr
+                td(style!=`width: ${width}px`)
+                    block
+    <!--[if (gte mso 9)|(IE)]>
+    </td>
+    <![endif]-->
+
+mixin col-custom(width)
+    <!--[if (gte mso 9)|(IE)]>
+    <td width="!{width}" valign="top">
+    <![endif]-->
+    table(style!=`width: 100%; max-width: ${width}px; display: inline-block; vertical-align: top;`)
+        tbody
+            tr
+                td(style!=`width: ${width}px`)
+                    block
+    <!--[if (gte mso 9)|(IE)]>
+    </td>
+    <![endif]-->

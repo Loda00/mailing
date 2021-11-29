@@ -1,0 +1,65 @@
+extends /pug/5_layouts/l-simple.pug
+
+include /pug/3_sections/s-footer.pug
+include /pug/3_sections/s-header.pug
+
+block styles
+    link(href=`${config.static_url}dist/css/4_pages/employer/p-worker-kit.css` media="all" rel="stylesheet" type="text/css")
+
+block content
+    +row()
+        +col-full()
+            +s-header('Cynthia', "¡Bienvenid@ a tu nueva chamba :)!")
+                table.e-table.p-worker-kit__salute-description(cellpadding='0', cellspacing='0', width='100%', border='0')
+                    tbody
+                        tr
+                            //- td.p-worker-kit__salute-description-td
+                            //-     table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                            //-         tbody
+                            //-             tr.p-worker-kit__date
+                            //-                 td(width="30")
+                            //-                     img(src!=`${config.assets_url}/calendar.png`)
+                            //-                 td
+                            //-                     p.e-text.e-text-left.p-worker-kit__date-text 22 de Marzo, 2019
+                            //-             tr
+                            //-                 td.p-worker-kit__date-line(colspan="2")
+                        tr
+                            td.p-worker-kit__salute-description-td(align="center")
+                                p.e-text
+                                    | Pronto tu empleador te preguntará si deseas pertenecer al&nbsp;
+                                    strong Sistema Privado de Pensiones (AFP)&nbsp;
+                                    | o al&nbsp;
+                                    strong Sistema Nacional de Pensiones (ONP).
+                        tr
+                            td.p-worker-kit__salute-description-td(align="center")
+                                p.e-text
+                                    | Por eso, aquí te daremos la información que necesitas saber para que tomes la mejor decisión.
+
+            center
+                table.e-table.e-table__container(cellpadding='0', cellspacing='0', width='100%', border='0')
+                    tbody
+                        tr
+                            td.e-table__td.p-worker-kit__title-td(align="center")
+                                p.p-worker-kit__title 
+                                    strong
+                                        | ¿Sabes en qué se diferencia las&nbsp;
+                                        span.e-color__turquoise AFP&nbsp;
+                                        | de la&nbsp;
+                                        span.e-color__turquoise ONP
+                                        | ?
+                        
+                        tr
+                            td.e-table__td.p-worker-kit__subtitle-td(align="center")
+                                p.e-text Te lo mostramos en este video
+                        tr
+                            td.e-table__td.p-worker-kit__mac-td(align="center")
+                                img(src!=`${config.assets_url}/employer/mac.png`)
+                        tr
+                            td.e-table__td(align="center")
+                                a.p-worker-kit__link(href="https://cdn01.sura.net.pe/integra/webapps/cercania/agenda/downloadable/AFPvsONP.mp4")
+                                    img.p-worker-kit__link-btn(src!=`${config.assets_url}/employer/button-video.png`)
+                        tr
+                            td.e-table__td.p-worker-kit__text-td(align="center")
+                                p.e-text Esperamos que te hayan quedado claras las diferencias y elijas la opción más adecuada para ti :)
+
+            +s-footer()

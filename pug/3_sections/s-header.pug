@@ -1,0 +1,28 @@
+mixin s-header(name, detail)
+    table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+        tbody
+            tr
+                td.e-table__td.s-header(align="center")
+                    table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                        tbody
+                            tr
+                                td.s-header__logo-td(align="center")
+                                    img.s-header__logo(src!=`${config.assets_url}/logo-integra.png`)
+
+                            tr
+                                td.s-header__title-td(align="center")
+                                    p.s-header__title.e-color__blue
+                                        | Hola&nbsp;
+                                        strong !{name}
+                                    
+                                    if detail
+                                        p.s-header__title.e-color__blue
+                                            strong !{detail}
+
+                            tr
+                                td.s-header__content-line(align="center")
+                                    table.s-header__line-table(cellpadding='0', cellspacing='0', width='17', border='0')
+                                        tbody
+                                            tr
+                                                td.s-header__yellow-line
+                    block

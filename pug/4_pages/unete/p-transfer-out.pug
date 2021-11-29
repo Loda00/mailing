@@ -1,0 +1,62 @@
+extends /pug/5_layouts/l-simple.pug
+
+include /pug/3_sections/s-footer-2.pug
+include /pug/3_sections/s-header-2.pug
+
+block styles
+    link(href=`${config.static_url}dist/css/4_pages/unete/p-transfer-out.css` media="all" rel="stylesheet" type="text/css")
+
+block content
+    +row()
+        +col-full()
+            +s-header-2('TRASPASO PARA AFILIADOS DE LICITACIÓN')
+
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td.s-greeting__container(align="center")
+                        table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                            tr
+                                td.s-greeting__icon(align="right", width="10%")
+                                
+                                td.s-greeting__icon(align="right", width="20%")
+                                    img.s-greeting__img(src!=`${config.assets_url}/annoying-face.png`)
+
+                                td(align="left", width="60%")
+                                    p.s-greeting__title
+                                        | Hola,&nbsp;
+                                        strong Cynthia
+                                    p.s-greeting__text
+                                        | Te enviamos el documento que necesitas para solicitar tu traspaso a otra AFP
+                                
+                                td.s-greeting__icon-greeting(align="right", width="10%")
+            
+            table.e-table(cellpadding='0', cellspacing='0', width='100%', border='0')
+                tr
+                    td.p-transfer-out__message
+                        center
+                            table.e-table(cellpadding='0', cellspacing='0', width='80%', border='0')
+                                tr
+                                    td(align="center")
+                                        p
+                                            | No olvides que siempre podrás volver a AFP Integra para seguir construyendo tu futuro con el respaldo de SURA, 
+                                            strong el Grupo #1 en pensiones de Latinoamérica y lider en seguros, ahorro e inversión de la región.
+                                        br
+                                        br
+                                        p.p-transfer-out__line
+                                        br
+                tr
+                    td.p-transfer-out__disclaimer
+                        center
+                            table.e-table(cellpadding='0', cellspacing='0', width='90%', border='0')
+                                tr
+                                    td(align="center")
+                                        img(src!=`${config.assets_url}/alert.png`)
+                                tr
+                                    td.p-transfer-out__disclaimer-td(align="center")
+                                        p
+                                            strong Importante: 
+                                            | La constancia adjunta tiene una 
+                                            br
+                                            strong vigencia de 10 días calendario.
+            
+            +s-footer-2()

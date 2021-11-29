@@ -1,0 +1,114 @@
+@require $pathBase + '/stylus/0_toolbox/variables.styl'
+
+@media screen and (max-width: $emailWidth)
+
+  table[class="body"] img
+    height auto !important
+    width 100% !important
+    text-align left !important
+
+  table[class="body"] img.fullwidth
+    max-width 100% !important
+
+  table[class="body"] center
+    min-width 0 !important
+
+  table[class="body"] .container
+    width 95% !important
+
+  table[class="body"] .row
+    width 100% !important
+    display block !important
+
+  table[class="body"] .wrapper
+    display block !important
+    padding-right 0 !important
+
+  table[class="body"] .columns,
+  table[class="body"] .column
+    table-layout fixed !important
+    float none !important
+    width 100% !important
+    padding-right 0px !important
+    padding-left 0px !important
+    display block !important
+
+  table[class="body"] .wrapper.first .columns,
+  table[class="body"] .wrapper.first .column
+    display table !important
+
+  table[class="body"] table.columns td,
+  table[class="body"] table.column td,
+  .col
+    width 100% !important
+
+  table[class="body"] table.columns td.expander
+    width 1px !important
+
+  table[class="body"] .right-text-pad,
+  table[class="body"] .text-pad-right
+    padding-left 10px !important
+
+  table[class="body"] .left-text-pad,
+  table[class="body"] .text-pad-left
+    padding-right 10px !important
+
+  table[class="body"] .hide-for-small,
+  table[class="body"] .show-for-desktop
+    display none !important
+
+  table[class="body"] .show-for-small,
+  table[class="body"] .hide-for-desktop
+    display inherit !important
+
+  table[class="body"] .mobile-align-center
+    text-align center !important
+  table[class="body"] .mobile-align-left
+    text-align left !important
+  table[class="body"] .mobile-align-right
+    text-align right !important
+
+  .mixed-two-up .col
+    width 100% !important
+
+  div[class="col"]
+    width: 100% !important
+
+@media screen and (min-width: ($emailWidth + 1))
+  table[class="container"]
+    width $emailWidth !important
+
+a[href^="tel"]
+    color inherit
+    text-decoration none
+
+a[x-apple-data-detectors]
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+
+@media only screen and (max-device-width: 479px)
+    .p-eecc-mail__table-head
+        width: 80% !important
+        text-align: center !important
+        float: none !important
+
+    .p-eecc-mail__table-head-icon
+        padding-top: 20px !important
+        width: 120px !important
+        height 120px !important
+        max-width: 120px !important
+        max-height 120px !important
+    
+    .p-eecc-mail__table-head-text
+        text-align: center !important
+        padding-left: 0 !important 
+
+    .p-eecc-mail__icon-phone
+        width: 30% !important
+    
+    .p-eecc-mail__numbers
+        width: 70% !important
